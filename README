@@ -1,0 +1,8 @@
+•	3 Queues are considered, namely Q0,Q1,Q2
+•	Q0 – Round Robin with Time Quantum = 8
+•	Q1 – Round Robin with Time Quantum = 16
+•	Q2 – First Come First Serve
+For example, in the multilevel feedback queue scheduler mentioned above let the queue be numbered from Q0 to Q2. The scheduler first executes all processes in Q0. Only when Q0 is empty will it execute processes in Q1. Similarly, processes in Q2 will be executed only if Q0 and Q1 is empty. A process that arrives for Q1 will pre-empt a process in Q2. A process in Q1 will in turn be pre-empted by a process arriving for Q0.
+A process entering the ready queue is put in Q0. A process in Q0 is given a time quantum of 8 units. If it does not finish within this time, it is moved to the tail of Q1. If Q0 is empty, the process at the head of Q1 is given a quantum of 16 units. If it does not complete, it is pre-empted and is put into Q2. 
+
+Reference: Abraham Silberschatz, Peter Baer Galvin and Greg Gagne
